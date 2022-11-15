@@ -3,6 +3,16 @@ package com.yearup.week4.homework;
 import com.yearup.week4.code.linkedlist.SinglyLinkedList;
 
 public class HomeWork {
+    public static void generateTable(int n){
+        for (int i=1; i<=10 ; i++) {
+            System.out.println(n + " x " + i + " = " + n*i );
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(HomeWork.reverseString("Test"));
+
+    }
+
 
     /**
      * takes a String input and returns a char array of reversed string
@@ -10,7 +20,14 @@ public class HomeWork {
      * @return
      */
     public static char[] reverseString(String input){
-        return null;
+
+        char[] out = new char[input.length()];
+        int j = input.length()-1;
+        for (int i=0; i<input.length(); i++) {
+            out[i] = input.charAt(j);
+            j--;
+        }
+        return out;
     }
 
     /**
